@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function PropsReact(props){
-    console.log(props);
+    
     return(
         <div>
 

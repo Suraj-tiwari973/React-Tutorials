@@ -3,28 +3,21 @@ import ReactDOM  from "react-dom";
 import App from './App';
 import GetDate from './GetDate';
 import PropsReact from "./PropsReact";
+import ArrayData from "./ArrayData";
 
 function MainPage(){
+
+    const ArrayElements =  ArrayData.map(item=>{
+        return <PropsReact name={item.name} Mob = {item.Mobile}/>
+    })
+
     return(
         <div>
             <App/>
             <GetDate/>
-            <PropsReact 
-                name = "Cpatain Suraj"
-                Mob = '34242422424234'
-            />
-            <PropsReact 
-                name = "Cpatain Abhishek"
-                Mob = '739023872234'
-            />
-            <PropsReact 
-                name = "Cpatain Mohit"
-                Mob = '73987234933'
-            />
+            {ArrayElements}
         </div>
     )
 }
 
 ReactDOM.render(<MainPage/>,document.getElementById('root'));
-
-// hello captain.
